@@ -1,0 +1,46 @@
+.projects-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 50vW;
+    height: 40vh;
+
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-y: auto;
+
+    background: radial-gradient(circle farthest-corner at 0 0, #ffffff66, #ffffff00);
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    text-align: center;
+
+    padding: 0 1rem;
+}
+
+.table-header>.header-text {
+    font-weight: 200;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0.5;
+}
+
+.icon-wrapper>img {
+    filter: invert();
+    width: 10%;
+}

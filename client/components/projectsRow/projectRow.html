@@ -1,0 +1,23 @@
+<template name="projectRow">
+    <div class="project">
+        <span class="project-name" title="{{title}}">{{title}}</span>
+
+        {{#if rendered}}
+        <a href="{{URI}}" target="_blank">{{URI}}</a>
+        {{else}}
+        <span class="progress-bar">
+            <span class="bar"></span>
+        </span>
+        {{/if}}
+        <div class="project-control">
+            {{#if rendered}}
+            <button class="open-btn">Open</button>
+            {{else}}
+            <button class="render-btn">Render</button>
+            {{/if}}
+            <img class="delete-icon" src="delete.png" alt="delete-icon">
+        </div>
+
+
+    </div>
+</template>

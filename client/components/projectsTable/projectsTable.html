@@ -1,0 +1,26 @@
+<template name="projectsTable">
+    <div class="projects-table">
+        {{>tableHeader}}
+        {{#each projects }}
+        {{> projectRow}}
+        {{else}}
+        {{>empty}}
+        {{/each}}
+
+    </div>
+</template>
+
+<template name="tableHeader">
+    <div class="table-header">
+        <span class="header-text">Project name</span>
+        <span class="header-text">Progress</span>
+        <span class="header-text">Status</span>
+    </div>
+</template>
+
+<template name="empty">
+    <div class="icon-wrapper">
+        <img class="empty-icon" src="empty.svg" alt="empty-img">
+        <span>Empty queue</span>
+    </div>
+</template>

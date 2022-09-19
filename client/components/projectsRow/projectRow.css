@@ -1,0 +1,110 @@
+.project {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+
+    background: radial-gradient(circle farthest-corner at 0 0, #2293d436, #2293d404);
+
+    -webkit-animation: pop.4s ease-in-out both;
+    animation: pop.4s ease-in-out both;
+
+}
+
+.project-name {
+    display: inline-block;
+    width: 10ch;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.progress-bar {
+    position: relative;
+    align-self: center;
+
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+}
+
+.progress-bar>.bar {
+    position: absolute;
+
+    width: 0%;
+    height: 10px;
+    border-radius: 10px;
+
+    background: #23a5f0;
+
+    transition-duration: 0.5s;
+}
+
+.project-status {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.project-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-control>button {
+    height: fit-content;
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.632);
+    background-color: rgba(134, 134, 134, 0.59);
+
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.project-control>button:hover {
+    color: rgba(255, 255, 255, 0.742);
+    background-color: rgba(146, 146, 146, 0.59);
+}
+
+.project-control>button:disabled,
+.project-control>button:hover:disabled {
+    background-color: rgb(73, 73, 73);
+    color: rgb(156, 156, 156);
+}
+
+.project-control>.delete-icon {
+    width: 20px;
+    height: 20px;
+
+    filter: invert();
+
+    opacity: 0.5;
+
+    cursor: pointer;
+}
+
+
+@keyframes pop {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    50% {
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
